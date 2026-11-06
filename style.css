@@ -1,0 +1,170 @@
+
+/* GENERAL PAGE  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+    padding: 30px 30px;
+}
+
+/* PAGE HEADING */
+
+h1,h2 {
+    text-align: center;
+    color: #174c70;
+    margin-bottom: 10px;
+}
+
+
+header p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+    font-style: italic;
+
+}
+
+
+/* SEARCH AND CATEGORY CONTROLS */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    min-width: 220px;
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #3182ce;
+}
+
+/* PROGRESS SECTION */
+
+.progress {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.progress p {
+    background-color: #dceef7;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #174c70;
+}
+
+/* RESOURCE CARDS */
+
+#resource-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.resource-card {
+    background-color: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.resource-card h3 {
+    color: #174c70;
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* COMPLETION STATUS */
+
+.resource-card .completed {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.resource-card .incomplete {
+    color: #b45309;
+    font-weight: bold;
+}
+
+/* BUTTONS */
+
+.resource-card button {
+    background-color: #176b87;
+    color: white;
+    border: none;
+    padding: 11px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.resource-card button:hover {
+    background-color: #104c63;
+}
+
+/* EMPTY SEARCH MESSAGE */
+
+#empty-message {
+    text-align: center;
+    color: #b45309;
+    margin: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    #resource-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    #resource-list {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    input,
+    select {
+        width: 100%;
+    }
+}
